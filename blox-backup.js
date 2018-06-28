@@ -40,11 +40,11 @@ class BloxBackup extends PolymerElement {
 
   _start(){
     if(this.filename && this.data && this.suffix){
-      this._backup(this.filename, this.data, this.suffix)
+      this.backup(this.filename, this.data, this.suffix)
     }
   }
 
-  _backup(name, data, suffix) {
+  backup(name, data, suffix) {
     const filename = `${name}_${+new Date()}.${suffix}`;
     const popup = window.document.createElement('a');
     popup.target = '_blank';
